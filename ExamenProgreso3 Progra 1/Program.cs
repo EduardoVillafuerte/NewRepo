@@ -17,4 +17,4 @@ namespace ExamenProgreso3_Progra_1
             Application.Run(new MenuForm());
         }
     }
-}regrwes
+}
