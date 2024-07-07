@@ -100,6 +100,7 @@
             this.ShowIcon = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Menu";
+            this.Load += new System.EventHandler(this.MenuForm_Load);
             this.ResumeLayout(false);
 
         }
