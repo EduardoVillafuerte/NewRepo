@@ -42,17 +42,13 @@
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.productsBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.programacion_I_ExamDataSet = new ExamenProgreso3_Progra_1.Programacion_I_ExamDataSet();
+            this.productsTableAdapter = new ExamenProgreso3_Progra_1.Programacion_I_ExamDataSetTableAdapters.ProductsTableAdapter();
             this.Id = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ProName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ProPrice = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ProCount = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.productsBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.programacion_I_ExamDataSet = new ExamenProgreso3_Progra_1.Programacion_I_ExamDataSet();
-            this.productsTableAdapter = new ExamenProgreso3_Progra_1.Programacion_I_ExamDataSetTableAdapters.ProductsTableAdapter();
-            this.idDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.proNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.proPriceDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.proCountDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.productsBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.programacion_I_ExamDataSet)).BeginInit();
@@ -80,7 +76,7 @@
             // 
             this.button3.BackColor = System.Drawing.SystemColors.ControlLight;
             this.button3.CausesValidation = false;
-            this.button3.Location = new System.Drawing.Point(42, 538);
+            this.button3.Location = new System.Drawing.Point(89, 538);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(180, 29);
             this.button3.TabIndex = 29;
@@ -157,7 +153,7 @@
             // button1
             // 
             this.button1.Font = new System.Drawing.Font("Times New Roman", 10F);
-            this.button1.Location = new System.Drawing.Point(331, 373);
+            this.button1.Location = new System.Drawing.Point(320, 380);
             this.button1.Margin = new System.Windows.Forms.Padding(2);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(92, 28);
@@ -169,10 +165,10 @@
             // button2
             // 
             this.button2.Font = new System.Drawing.Font("Times New Roman", 10F);
-            this.button2.Location = new System.Drawing.Point(491, 540);
+            this.button2.Location = new System.Drawing.Point(481, 538);
             this.button2.Margin = new System.Windows.Forms.Padding(2);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(148, 26);
+            this.button2.Size = new System.Drawing.Size(158, 28);
             this.button2.TabIndex = 28;
             this.button2.Text = "Cambiar";
             this.button2.UseVisualStyleBackColor = true;
@@ -190,11 +186,7 @@
             this.Id,
             this.ProName,
             this.ProPrice,
-            this.ProCount,
-            this.idDataGridViewTextBoxColumn,
-            this.proNameDataGridViewTextBoxColumn,
-            this.proPriceDataGridViewTextBoxColumn,
-            this.proCountDataGridViewTextBoxColumn});
+            this.ProCount});
             this.dataGridView1.DataSource = this.productsBindingSource;
             this.dataGridView1.GridColor = System.Drawing.SystemColors.ActiveCaption;
             this.dataGridView1.Location = new System.Drawing.Point(52, 83);
@@ -203,6 +195,20 @@
             this.dataGridView1.RowHeadersWidth = 47;
             this.dataGridView1.Size = new System.Drawing.Size(617, 229);
             this.dataGridView1.TabIndex = 30;
+            // 
+            // productsBindingSource
+            // 
+            this.productsBindingSource.DataMember = "Products";
+            this.productsBindingSource.DataSource = this.programacion_I_ExamDataSet;
+            // 
+            // programacion_I_ExamDataSet
+            // 
+            this.programacion_I_ExamDataSet.DataSetName = "Programacion_I_ExamDataSet";
+            this.programacion_I_ExamDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // productsTableAdapter
+            // 
+            this.productsTableAdapter.ClearBeforeFill = true;
             // 
             // Id
             // 
@@ -239,56 +245,6 @@
             this.ProCount.Name = "ProCount";
             this.ProCount.ReadOnly = true;
             this.ProCount.Width = 150;
-            // 
-            // productsBindingSource
-            // 
-            this.productsBindingSource.DataMember = "Products";
-            this.productsBindingSource.DataSource = this.programacion_I_ExamDataSet;
-            // 
-            // programacion_I_ExamDataSet
-            // 
-            this.programacion_I_ExamDataSet.DataSetName = "Programacion_I_ExamDataSet";
-            this.programacion_I_ExamDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // productsTableAdapter
-            // 
-            this.productsTableAdapter.ClearBeforeFill = true;
-            // 
-            // idDataGridViewTextBoxColumn
-            // 
-            this.idDataGridViewTextBoxColumn.DataPropertyName = "Id";
-            this.idDataGridViewTextBoxColumn.HeaderText = "Id";
-            this.idDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.idDataGridViewTextBoxColumn.Name = "idDataGridViewTextBoxColumn";
-            this.idDataGridViewTextBoxColumn.ReadOnly = true;
-            this.idDataGridViewTextBoxColumn.Width = 115;
-            // 
-            // proNameDataGridViewTextBoxColumn
-            // 
-            this.proNameDataGridViewTextBoxColumn.DataPropertyName = "ProName";
-            this.proNameDataGridViewTextBoxColumn.HeaderText = "ProName";
-            this.proNameDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.proNameDataGridViewTextBoxColumn.Name = "proNameDataGridViewTextBoxColumn";
-            this.proNameDataGridViewTextBoxColumn.ReadOnly = true;
-            this.proNameDataGridViewTextBoxColumn.Width = 115;
-            // 
-            // proPriceDataGridViewTextBoxColumn
-            // 
-            this.proPriceDataGridViewTextBoxColumn.DataPropertyName = "ProPrice";
-            this.proPriceDataGridViewTextBoxColumn.HeaderText = "ProPrice";
-            this.proPriceDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.proPriceDataGridViewTextBoxColumn.Name = "proPriceDataGridViewTextBoxColumn";
-            this.proPriceDataGridViewTextBoxColumn.ReadOnly = true;
-            this.proPriceDataGridViewTextBoxColumn.Width = 115;
-            // 
-            // proCountDataGridViewTextBoxColumn
-            // 
-            this.proCountDataGridViewTextBoxColumn.DataPropertyName = "ProCount";
-            this.proCountDataGridViewTextBoxColumn.HeaderText = "ProCount";
-            this.proCountDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.proCountDataGridViewTextBoxColumn.Name = "proCountDataGridViewTextBoxColumn";
-            this.proCountDataGridViewTextBoxColumn.ReadOnly = true;
-            this.proCountDataGridViewTextBoxColumn.Width = 115;
             // 
             // UpdateForm
             // 
@@ -342,9 +298,5 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn ProName;
         private System.Windows.Forms.DataGridViewTextBoxColumn ProPrice;
         private System.Windows.Forms.DataGridViewTextBoxColumn ProCount;
-        private System.Windows.Forms.DataGridViewTextBoxColumn idDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn proNameDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn proPriceDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn proCountDataGridViewTextBoxColumn;
     }
 }
