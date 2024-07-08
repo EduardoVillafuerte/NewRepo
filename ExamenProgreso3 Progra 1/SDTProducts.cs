@@ -8,12 +8,15 @@ using System.Windows.Forms;
 
 namespace ExamenProgreso3_Progra_1
 {
-    public class SDTProducts
+    public class Productos
     {
-        string ProdutcoName;
-        float ProductoPrice;
-        int ProductoNum;
-
+        public int Id { get; set; }
+        public string ProductoName { get; set; } 
+        public decimal ProductoPrice { get; set; }
+        public int ProductoNum { get; set; }
+        public int NFactura { get; set; }
+        public decimal Total { get; set; }
+        public int Cantidad { get; set;}
     }
     public class FormManager
     {
@@ -22,7 +25,10 @@ namespace ExamenProgreso3_Progra_1
         public Form Delete { get; set; } = new DeleteForm();
         public Form Facturacion { get; set; } = new FacturacionForm();
         public Form Update { get; set; } = new UpdateForm();
- 
+        public Form Validacionccedula { get; set; } = new Validacion();
+        public Form Menu { get; set; } = new MenuForm();
+        public Form Aggusuario { get; set; } = new Agregarusuario();
+
     }
 }
 

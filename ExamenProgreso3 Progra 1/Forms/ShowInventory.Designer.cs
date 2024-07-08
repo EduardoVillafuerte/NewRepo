@@ -30,19 +30,19 @@
         {
             this.components = new System.ComponentModel.Container();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.productsBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.productsBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.programacion_I_ExamDataSet = new ExamenProgreso3_Progra_1.Programacion_I_ExamDataSet();
+            this.productsBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.productsTableAdapter = new ExamenProgreso3_Progra_1.Programacion_I_ExamDataSetTableAdapters.ProductsTableAdapter();
             this.button1 = new System.Windows.Forms.Button();
-            this.productsBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.Id = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ProName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ProPrice = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ProCount = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.productsBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.programacion_I_ExamDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.productsBindingSource1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.programacion_I_ExamDataSet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.productsBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // dataGridView1
@@ -67,15 +67,20 @@
             this.dataGridView1.Size = new System.Drawing.Size(765, 361);
             this.dataGridView1.TabIndex = 0;
             // 
-            // productsBindingSource
+            // productsBindingSource1
             // 
-            this.productsBindingSource.DataMember = "Products";
-            this.productsBindingSource.DataSource = this.programacion_I_ExamDataSet;
+            this.productsBindingSource1.DataMember = "Products";
+            this.productsBindingSource1.DataSource = this.programacion_I_ExamDataSet;
             // 
             // programacion_I_ExamDataSet
             // 
             this.programacion_I_ExamDataSet.DataSetName = "Programacion_I_ExamDataSet";
             this.programacion_I_ExamDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // productsBindingSource
+            // 
+            this.productsBindingSource.DataMember = "Products";
+            this.productsBindingSource.DataSource = this.programacion_I_ExamDataSet;
             // 
             // productsTableAdapter
             // 
@@ -90,11 +95,6 @@
             this.button1.Text = "Volver ";
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
-            // 
-            // productsBindingSource1
-            // 
-            this.productsBindingSource1.DataMember = "Products";
-            this.productsBindingSource1.DataSource = this.programacion_I_ExamDataSet;
             // 
             // Id
             // 
@@ -141,12 +141,13 @@
             this.Controls.Add(this.dataGridView1);
             this.MaximizeBox = false;
             this.Name = "ShowInventory";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "ShowInventory";
             this.Load += new System.EventHandler(this.ShowInventory_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.productsBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.programacion_I_ExamDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.productsBindingSource1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.programacion_I_ExamDataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.productsBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -157,9 +158,6 @@
         private Programacion_I_ExamDataSet programacion_I_ExamDataSet;
         private System.Windows.Forms.BindingSource productsBindingSource;
         private Programacion_I_ExamDataSetTableAdapters.ProductsTableAdapter productsTableAdapter;
-        private System.Windows.Forms.DataGridViewTextBoxColumn proNameDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn proPriceDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn proCountDataGridViewTextBoxColumn;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.BindingSource productsBindingSource1;
         private System.Windows.Forms.DataGridViewTextBoxColumn Id;
